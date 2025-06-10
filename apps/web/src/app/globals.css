@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clean, professional theme */
+:root {
+  --primary-blue: #2563eb;
+  --secondary-blue: #3b82f6;
+  --light-blue: #eff6ff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-600: #4b5563;
+  --gray-800: #1f2937;
+  --success-green: #10b981;
+  --warning-orange: #f59e0b;
+  --danger-red: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: var(--gray-50);
+  color: var(--gray-800);
+}
+
+body {
+  background: var(--gray-50);
+  min-height: 100vh;
+}
+
+/* Professional button styles */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-medium transition-colors border border-gray-300;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+}
+
+/* Form input styles */
+.form-input {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors;
+}
+
+/* Clean, simple styles replacing animated ones */
+.modern-gradient {
+  background: var(--gray-50);
+}
+
+.glass-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.option-card {
+  transition: all 0.2s ease;
+  background: white;
+  border: 1px solid var(--gray-200);
+}
+
+.option-card:hover {
+  border-color: var(--primary-blue);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.option-card.selected {
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+}
+
+.progress-bar {
+  background: var(--gray-200);
+  height: 4px;
+  border-radius: 2px;
+}
+
+.progress-fill {
+  background: var(--primary-blue);
+  height: 4px;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.step-indicator {
+  background: var(--primary-blue);
+  color: white;
+}
+
+.modern-button {
+  background: var(--primary-blue);
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.modern-button:hover {
+  background: var(--secondary-blue);
+}
+
+.modern-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Remove all animations */
+.floating-element {
+  display: none;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.animate-fadeIn {
+  opacity: 1;
+}
+
+.animate-blob {
+  display: none;
+}
+
+/* Clean typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--gray-800);
+}
+
+/* Remove backdrop blur effects */
+.backdrop-blur-md {
+  backdrop-filter: none;
+  background: white;
+}
+
+/* Clean shadows */
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-xl {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
